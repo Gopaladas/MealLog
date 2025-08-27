@@ -4,24 +4,34 @@ const userAuth = async (req, res, next) => {
   const { token } = req.cookies;
 
   if (!token) {
-    return res.json({ success: false, message: "Not Authorized Login Again" });
+    return res.status(401).json({ 
+      success: false, 
+      message: "Not Authorized Login Again" 
+    });
   }
 
   try {
     const tokenDecode = jwt.verify(token, process.env.JWT_SECRET);
-    console.log(tokenDecode.id);
-    if (tokenDecode.id) {
-      req.userId = tokenDecode.id;
+    console.log("Decoded token:", tokenDecode);
+    
+    // Check for common user ID property names
+    const userId = tokenDecode.userId || tokenDecode.id || tokenDecode._id;
+    
+    if (userId) {
+      req.userId = userId;
+      next();
     } else {
-      return res.json({
+      return res.status(401).json({
         success: false,
-        message: "Not Authorized Login Again",
+        message: "Invalid token format",
       });
     }
-
-    next();
   } catch (error) {
-    res.json({ success: false, message: error.message });
+    console.error("JWT verification error:", error.message);
+    return res.status(401).json({ 
+      success: false, 
+      message: "Not Authorized Login Again" 
+    });
   }
 };
 
