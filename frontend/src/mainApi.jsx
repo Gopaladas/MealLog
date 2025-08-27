@@ -1,4 +1,4 @@
-const backendApi = "http://localhost:3000/api/v1";
+const backendApi = "https://meal-log-beta.vercel.app";
 const userApi = `${backendApi}/user`;
 const mealApi = `${backendApi}/meal`;
 
