@@ -38,9 +38,9 @@ const Register = () => {
       const data = await axios.post(`${userApi}/signup`, formData, {
         withCredentials: true,
       });
-      console.log(data.data.data);
+      console.log(data.data.user);
       if (data.data.success === true) {
-        dispatch(setLogin(data?.data?.data));
+        dispatch(setLogin(data?.data?.user));
         // toast.success("Successfully registered");
         alert("Successfully registered");
         navigate("/mainPage");
