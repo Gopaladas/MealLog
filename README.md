@@ -1,9 +1,9 @@
-##The project structure : 
+## The project structure : 
 	Meal : 
 		backend
 		frontend
 
-##Backend : 
+## Backend : 
 	Move to backend folder :
 		Meal $ cd backend
 	to download the node_modules of backend :
@@ -20,9 +20,9 @@ It automatically take the logged in userId from userAuth code.
 To find the BMR : I kept a button fill_form in profile , after filling 
 the form throught frontend the BMR is calculated.
 
-##Api end points :
+## Api end points :
 	
-	##UserEnd points : 
+	** UserEnd points : ** 
 	
 	To add the user data : 
 		userRoute.post("/signup", signUp);
@@ -53,7 +53,7 @@ the form throught frontend the BMR is calculated.
 		http://localhost:3000/api/v1/meal/getmeal?date=2025-08-26
 
 
-##frontend : 
+## frontend : 
 	Move to frontend folder :
 		Meal $ cd frontend
 	To download the node_modules of frontend :
