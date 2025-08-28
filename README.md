@@ -1,3 +1,8 @@
+## TeckStack Used : 
+	Backend : Nodejs,Express,Mongoose,MongoDB (mongodb atlas)
+ 	Frontend : Reactjs
+
+
 ## The project structure : 
 	Meal : 
 		backend
