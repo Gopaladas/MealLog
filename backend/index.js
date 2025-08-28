@@ -10,11 +10,11 @@ const app = express();
 
 app.use(
   cors({
-    //origin: "http://localhost:5173", // Your frontend URL
+    origin: "http://localhost:5173", 
     //origin:"https://meal-log-beta.vercel.app",
-    origin:"https://meal-log-cj3a.vercel.app",
+    //origin:"https://meal-log-cj3a.vercel.app",
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-    credentials: true, // Allow credentials
+    credentials: true, 
   })
 );
 app.use(express.json());
