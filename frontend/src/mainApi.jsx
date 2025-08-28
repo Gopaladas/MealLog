@@ -1,4 +1,4 @@
-const backendApi = "https://meallog-1.onrender.com/api/v1";
+const backendApi = "http://localhost:3000/api/v1";
 const userApi = `${backendApi}/user`;
 const mealApi = `${backendApi}/meal`;
 
