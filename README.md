@@ -40,7 +40,7 @@ the form throught frontend the BMR is calculated.
 		userRoute.put("/calculatebmr", userAuth, updateBMR);
 		http://localhost:3000/api/v1/user/calculateBmr
 
-	##MealEnd points :
+	** MealEnd points : **
 	
 	To add meal log :
 		mealRoutes.post("/addmeal", userAuth, createMeal);
