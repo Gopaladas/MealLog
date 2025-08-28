@@ -17,6 +17,9 @@ first check the authorisation in userAuth code and set the userId to
 req.userId = tokenDecoded.id.
 It automatically take the logged in userId from userAuth code.
 
+To find the BMR : I kept a button fill_form in profile , after filling 
+the form throught frontend the BMR is calculated.
+
 Api end points :
 	
 	UserEnd points : 
